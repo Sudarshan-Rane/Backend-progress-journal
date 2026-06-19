@@ -1,4 +1,4 @@
-package month1.day3;
+package month1.day3_condiitional_Statements;
 import java.util.Scanner;
 
 
