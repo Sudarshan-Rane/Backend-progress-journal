@@ -1,5 +1,6 @@
 package month1.day5;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -114,9 +115,7 @@ public class Main {
             System.out.println("Access Granted! Welcome to your account.");
         }*/
 
-
-        Scanner scanner = new Scanner(System.in);
-        int sum = 0;
+        /*       int sum = 0;
 
         System.out.print("Enter number 1: ");
         int number = scanner.nextInt();
@@ -135,7 +134,39 @@ public class Main {
             number2 = scanner.nextInt();
         }
 
-        System.out.println("Sum = " +(number+number2));
+        System.out.println("Sum = " +(number+number2));*/
+
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int totalattempts = 7;
+
+
+        for (int server =1; server<=3; server++){
+            int targetport = random.nextInt(1, 11);
+            System.out.println("\n--- HACKING SERVER "+ server +" ---\n");
+            while(totalattempts>0){
+
+                System.out.print("You have " + totalattempts + " attempts left. Enter port (1-10): ");
+                int guess  = scanner.nextInt();
+                totalattempts--;
+                if (guess==targetport){
+                    System.out.println("Server Offline!");
+                    break;
+                }
+                else {
+                    System.out.println("Access Denied.");
+                }
+
+            }
+        }
+        if (totalattempts>0) {
+            System.out.println("ALL SERVERS OFFLINE. AI CONTAINED.");
+        }
+        else {
+            System.out.println("SYSTEM LOCKDOWN. THE AI HAS ESCAPED.");
+        }
 
 
         scanner.close();
