@@ -1,4 +1,4 @@
-package month1.day5;
+package month1.day5_ternary_switch_loops;
 import java.util.Scanner;
 import java.util.Random;
 
