@@ -1,4 +1,4 @@
-package month1.day7_Methods;
+package month1.day7_Methods_and_Overloading_methods_practise;
 
 import java.util.Scanner;
 
