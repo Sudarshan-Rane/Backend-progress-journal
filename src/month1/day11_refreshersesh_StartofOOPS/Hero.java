@@ -16,23 +16,22 @@ class Hero {
         System.out.println(name+" attacks! Stamina drops to "+stamina+".");
 
     }
+
+    public Hero(String name1, int health1, int stamina1){
+        this.name = name1;
+        this.health = health1;
+        this.stamina = stamina1;
+
+        System.out.println("--> SPUN UP NEW HERO: "+name);
+    }
 }
 
 class Main {
     public static void main(String[] args) {
 
-        Hero hero1 = new Hero();
-        Hero hero2 = new Hero();
+        Hero hero1 = new Hero("Batman",100,50);
+        Hero hero2 = new Hero("Superman",500,100);
 
-        hero1.name= "Batman";
-        hero1.health= 100;
-        hero1.stamina = 30;
-
-        hero2.name= "Superman";
-        hero2.health= 500;
-        hero2.stamina = 100;
-
-        hero1.fight();
         hero1.fight();
 
         hero2.heal(50);
