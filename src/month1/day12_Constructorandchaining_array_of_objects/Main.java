@@ -1,4 +1,4 @@
-package month1.day12;
+package month1.day12_Constructorandchaining_array_of_objects;
 
 class CyberPet{
     String name;
