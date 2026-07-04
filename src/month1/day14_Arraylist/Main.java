@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        ArrayList<String> playlist = new ArrayList<>();
+
+/*        ArrayList<String> playlist = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -45,9 +46,22 @@ public class Main {
 
             System.out.println("Track: "+play);
         }
+        scanner.close();*/
+
+        ArrayList<Planet> myChart = new ArrayList<>();
+
+        myChart.add(new Planet("Sun", "Vrishabha"));
+        myChart.add(new Planet("Moon", "Meena"));
+        myChart.add(new Planet("Mars", "Kumbha"));
+        myChart.add(new Planet("Jupiter", "Meena"));
 
 
-        scanner.close();
+        for (Planet chart : myChart){
+            if (chart.rasi.equalsIgnoreCase("Meena")){
+                System.out.println(chart.name+" is currently in Meena!");
+            }
+        }
+
 
 
     }
