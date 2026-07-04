@@ -11,7 +11,7 @@ public class Main {
         planet.emitEnergy();
         star.emitEnergy();*/
 
-        Dragon dragon = new Dragon("Smaug", 1000);
+/*        Dragon dragon = new Dragon("Smaug", 1000);
         Orc orc = new Orc("Garrosh", 500);
 
         dragon.displayStatus();
@@ -20,7 +20,7 @@ public class Main {
         dragon.basicAttack();
         orc.basicAttack();
 
-        dragon.fly();
+        dragon.fly();*/
 
     }
 }
