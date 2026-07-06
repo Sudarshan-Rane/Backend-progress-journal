@@ -1,4 +1,4 @@
-package month1.day1_syntax;
+package month1.day01_syntax;
 
 public class Main {
 

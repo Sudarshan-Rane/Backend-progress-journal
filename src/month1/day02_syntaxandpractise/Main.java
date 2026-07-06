@@ -1,4 +1,4 @@
-package month1.day2_syntaxandpractise;
+package month1.day02_syntaxandpractise;
 import java.util.Scanner;
 
 public class Main {

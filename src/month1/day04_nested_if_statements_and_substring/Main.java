@@ -1,4 +1,4 @@
-package month1.day4_nested_if_statements_and_substring;
+package month1.day04_nested_if_statements_and_substring;
 import java.util.Scanner;
 
 public class Main {

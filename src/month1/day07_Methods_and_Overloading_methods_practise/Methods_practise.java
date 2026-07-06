@@ -1,4 +1,4 @@
-package month1.day7_Methods_and_Overloading_methods_practise;
+package month1.day07_Methods_and_Overloading_methods_practise;
 import java.util.Scanner;
 import java.util.Random;
 public class Methods_practise {

@@ -1,4 +1,4 @@
-package month1.day8_Arrays;
+package month1.day08_Arrays;
 
 public class ArrayMastery {
 

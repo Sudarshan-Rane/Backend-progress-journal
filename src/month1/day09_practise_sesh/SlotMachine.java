@@ -1,4 +1,4 @@
-package month1.day9_practise_sesh;
+package month1.day09_practise_sesh;
 
 import java.util.Random;
 import java.util.Scanner;
