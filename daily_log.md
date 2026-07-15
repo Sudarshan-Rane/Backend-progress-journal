@@ -13,3 +13,5 @@ currently on vacation from 8th of july till 10th of july since its a 3 day vacat
 logging for not breaking the commit streak
 
 still on vacation so will get back here from 12th july
+
+Starting studies again
