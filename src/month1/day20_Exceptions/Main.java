@@ -60,7 +60,7 @@ public class Main {
             System.out.println("ALERT: Classified file not found!");
         }*/
 
-        LocalDateTime newone = LocalDateTime.now();
+        /*LocalDateTime newone = LocalDateTime.now();
         DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
 
         String receiptTime = newone.format(myFormat);
@@ -87,7 +87,19 @@ public class Main {
 
         System.out.println("Current time in Tokyo: " + tokyoTime.format(newf));
 
-        scanner.close();
+        scanner.close();*/
+
+        Gadget newGadget = new Gadget();
+        newGadget.activate();
+
+        Gadget spyWatch = new Gadget(){
+            @Override
+            void activate(){
+                System.out.println("Spy Watch lasers firing! 🔴");
+            }
+        };
+
+        spyWatch.activate();
 
 
     }
