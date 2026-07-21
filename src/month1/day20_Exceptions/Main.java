@@ -1,5 +1,7 @@
 package month1.day20_Exceptions;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -24,7 +26,7 @@ public class Main {
         }*/
 
 
-        String filepath = "C:\\Users\\sudar\\Downloads\\mission_log.txt";
+        /*String filepath = "C:\\Users\\sudar\\Downloads\\mission_log.txt";
         String text = "Agent 007 Status Report\nThe target has been secured.";
 
         try(FileWriter writer = new FileWriter(filepath,true)){
@@ -35,6 +37,18 @@ public class Main {
         catch (IOException e){
             System.out.println("SYSTEM ERROR: Hard drive write failed.");
             e.printStackTrace();
+        }*/
+
+        String path = "C:\\Users\\sudar\\Downloads\\mission_log.txt";
+
+        File myfile =  new File(path);
+        try(Scanner scanner1 = new Scanner(myfile)){
+            while (scanner1.hasNextLine()){
+                System.out.println(scanner1.nextLine());
+            }
+        }
+        catch (FileNotFoundException e){
+            System.out.println("ALERT: Classified file not found!");
         }
 
     }
