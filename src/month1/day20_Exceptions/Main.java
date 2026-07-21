@@ -12,6 +12,8 @@ import java.time.Period;
 import java.time.ZonedDateTime;
 import java.time.ZoneId;
 import java.time.LocalDateTime;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 
@@ -19,7 +21,7 @@ import java.time.LocalDateTime;
 public class Main {
     public static void main(String[] args){
 
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);*/
 
         /* try{
             System.out.print("Enter your 4-digit PIN: ");
@@ -89,7 +91,7 @@ public class Main {
 
         scanner.close();*/
 
-        Gadget newGadget = new Gadget();
+        /*Gadget newGadget = new Gadget();
         newGadget.activate();
 
         Gadget spyWatch = new Gadget(){
@@ -99,7 +101,27 @@ public class Main {
             }
         };
 
-        spyWatch.activate();
+        spyWatch.activate();*/
+
+        Timer countdownClock = new Timer();
+
+        TimerTask tickTask = new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("Tick...");
+            }
+        };
+
+        TimerTask explosionTask = new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("BOOM! 💥");
+                countdownClock.cancel();
+            }
+        };
+
+        countdownClock.scheduleAtFixedRate(tickTask,0,1000);
+        countdownClock.schedule(explosionTask,3500);
 
 
     }
