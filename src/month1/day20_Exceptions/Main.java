@@ -6,13 +6,22 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.FileWriter;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.Period;
+import java.time.ZonedDateTime;
+import java.time.ZoneId;
+import java.time.LocalDateTime;
+
+
+
 
 public class Main {
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
 
-       /* try{
+        /* try{
             System.out.print("Enter your 4-digit PIN: ");
             int pin = scanner.nextInt();
             System.out.println("Access Granted for PIN: "+pin);
@@ -39,7 +48,7 @@ public class Main {
             e.printStackTrace();
         }*/
 
-        String path = "C:\\Users\\sudar\\Downloads\\mission_log.txt";
+        /*        String path = "C:\\Users\\sudar\\Downloads\\mission_log.txt";
 
         File myfile =  new File(path);
         try(Scanner scanner1 = new Scanner(myfile)){
@@ -49,7 +58,37 @@ public class Main {
         }
         catch (FileNotFoundException e){
             System.out.println("ALERT: Classified file not found!");
-        }
+        }*/
+
+        LocalDateTime newone = LocalDateTime.now();
+        DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
+
+        String receiptTime = newone.format(myFormat);
+
+        System.out.println("Transaction successful on: "+receiptTime);
+
+        LocalDate date1 = LocalDate.now();
+
+        System.out.print("Enter the your birth year: ");
+        int y = scanner.nextInt();
+        System.out.print("Enter the your birth month: ");
+        int m = scanner.nextInt();
+        System.out.print("Enter the your birth day: ");
+        int d = scanner.nextInt();
+
+        LocalDate date2 = LocalDate.of(y,m,d);
+
+        Period age = Period.between(date2,date1);
+        System.out.println("I am exactly "+age.getYears()+" years and "+age.getMonths()+" months old.");
+
+        ZonedDateTime tokyoTime = ZonedDateTime.now(ZoneId.of("Asia/Tokyo"));
+
+        DateTimeFormatter newf = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
+
+        System.out.println("Current time in Tokyo: " + tokyoTime.format(newf));
+
+        scanner.close();
+
 
     }
 }
