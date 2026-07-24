@@ -17,3 +17,5 @@ still on vacation so will get back here from 12th july
 Starting studies again
 
 did a revision to brushup topics again
+
+took a day break
